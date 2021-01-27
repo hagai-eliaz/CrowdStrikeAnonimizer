@@ -1,0 +1,12 @@
+version: '2'
+services:
+  logstash:
+    image: docker.elastic.co/logstash/logstash:7.10.2
+    ports:
+      - 8080:8080
+    volumes:
+      - ./pipeline/:/usr/share/logstash/pipeline/
+      - ./settings/:/usr/share/logstash/config/
+      - ./ruby_scripts/:/usr/share/logstash/ruby_scripts/
+      - ./input/:/logstash_input/
+      - ./output/:/logstash_output

@@ -1,0 +1,7 @@
+- pipeline.id: cs-policies-anonimizer-pipeline
+  path.config: "/usr/share/logstash/pipeline/cs-policies"
+  pipeline.workers: 3
+- pipeline.id: cs-devices-anonimizer-pipeline
+  path.config: "/usr/share/logstash/pipeline/cs-devices"
+  pipeline.workers: 3
+  
